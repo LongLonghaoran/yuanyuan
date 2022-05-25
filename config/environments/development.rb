@@ -68,6 +68,8 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
-  config.force_ssl = true
-  config.ssl_options = {redirect: { host: "eddy.money.com", port: 443 }}
+  # config.force_ssl = true
+  # config.ssl_options = {redirect: { host: "eddy.money.com", port: 443 }}
+
+  # config.hosts << "eddy.money.com"
 end
