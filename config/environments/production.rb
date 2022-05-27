@@ -92,7 +92,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.force_ssl = true
-  config.ssl_options = {redirect: { host: "https://eddy.money.com", port: 443 }}
+  config.ssl_options = {redirect: { host: ENV['YUANYUAN_HOST'], port: 443 }}
 
-  config.hosts << "eddy.money.com"
+  config.hosts << ENV['YUANYUAN_HOST']
 end
