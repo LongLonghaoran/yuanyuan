@@ -90,4 +90,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.force_ssl = true
+  config.ssl_options = {redirect: { host: "https://eddy.money.com", port: 443 }}
+
+  config.hosts << "eddy.money.com"
 end
