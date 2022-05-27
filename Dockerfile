@@ -11,5 +11,7 @@ COPY lib /app/lib
 COPY config.ru /app/config.ru
 COPY public /app/public
 COPY vendor /app/vendor
-
-CMD ["rails", "s", "-b", "0.0.0.0", "-p", "3000"]
+ENV YUANYUAN_HOST=eddy.money.com
+ENV RAILS_ENV=production
+RUN rails assets:precompile
+CMD ["pumactl", "-F", "config/puma/production"]
